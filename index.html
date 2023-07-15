@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c52ea334fd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header"><b>Home</b></a></li>
+                    <li><a href="#about"><b>About</b></a></li>
+                    <li><a href="#Certifications"><b>Certifications</b></a></li>
+                    <li><a href="#contact"><b>Contact</b></a></li> 
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hey there, I am <span>Bhanu sree</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-------About-------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/bhanuphoto-1.jpeg" width="325" height="400">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"><b>About Me</b></h1>
+                     <p>I am Bhanu sree.I'm a B.tech student at Sri Vasavi Engineering College Computer Science Department.<br/>
+                        I am very curious to learn new things and I'm enthusiastic developer with a keen interest in software developement.I got certified in Hackathon and Brainovision for developing a web app.
+                     </p>
+                     <div class="tab-titles">
+                     <p class="tab-links active-link"onclick="opentab('skills')">Skills</p>
+                     <p class="tab-links"onclick="opentab('education')">Education</p>
+                     <p class="tab-links"onclick="opentab('hobbies')">Hobbies</p>
+                     </div>
+                     <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Java</span></li>
+                            <li><span>C++</span></li>
+                            <li><span>Python</span></li>
+                            <li><span>Web Development</span></li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020</span><br>Intermediate in MPC</li>
+                            <li><span>2024</span><br>B.Tech in Computer Science</li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="hobbies">
+                        <ul>
+                            <li><span>Listening Music</span></li>
+                            <li><span>Improving coding skills</span></li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------Certifications------------->
+    <div id="Certifications">
+        <div class="container">
+            <h1 class="sub-title"><b>My Certifications</b></h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/hackoverflow.jpeg"width="350" height="250">
+                    <div class="layer">
+                        <h3><b>HackOverFlow</b></h3>
+                        <p><b>I got certificate in HackOverFlow 2k22 which is conducted in our college.</b></p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/brainovision.jpeg"width="350" height="250">
+                    <div class="layer">
+                        <h3><b>BrainoVision</b></h3>
+                        <p><b>Developed a Web App on Humandiet</b></p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/scudverve.jpg"width="350" height="250">
+                    <div class="layer">
+                        <h3><b>SCUD verve</b></h3>
+                        <p><b>Participated in SCUD VERVE 2022, a technical fest on behalf of CSE department by Sri Vasavi Engineering College, Tadepalligudem.</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------contact------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title"><b>Contact Me</b></h1>
+                    <p><i class="fa-solid fa-paper-plane"></i><b> bhanusree9182@gmail.com</b></p>
+                    <p><i class="fas fa-phone-square-alt"></i><b>9704684005</b></p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/bhanusreeveeravalli/?igshid=MGNiNDI5ZTU%3D"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/bhanu-sree-41982725b"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/BhanusreeCV.pdf" download class="btn">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <i class="fa-regular fa-copyright"></i>Bhanusree</p>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwtimMZY48jCtiFqzFPiwN5ku7BPAqIGDHMiuIvVgcc42RKbjewUDndlptxHZLS14dI/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")       
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+</body>
+</html>
