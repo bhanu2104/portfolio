@@ -14,7 +14,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/bgimage1.jpg);
+    background-image: url(images/bgimage4.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -56,17 +56,17 @@ nav ul li a:hover::after{
     width: 100%;
 }
 .header-text{
-    margin-top: 12%;
+    margin-top: 5%;
     font-size: 20px;
 }
 .header-text h1{
-    font-size: 30px;
+    font-size: 35px;
     margin-top: 20px;
     text-align: center;
     color: #5c0145;
 }
 .header-text h1 span{
-    font-size: 40px;
+    font-size: 45px;
     color: #5c0145;
 }
 /*----------------About--------------------*/
@@ -89,6 +89,7 @@ nav ul li a:hover::after{
 }
 .about-col-2{
     flex-basis: 60%;
+    font-size: 25px;
 }
 .sub-title{
     font-size: 30px;
@@ -290,8 +291,15 @@ nav .fas{
         margin-top: 100%;
         font-size: 16px;
     }
+    #header{
+        background-image: url(images/bgimage41.jpg);
+    }
     .header-text h1{
         font-size: 30px;
+        color:#cf029c;
+    }
+    .header-text h1 span{
+        color: #8d046b;
     }
     nav ul li a{
         color: #fff;
